@@ -18,7 +18,7 @@ For what is expected see here:
  * https://github.com/sealink/ticket_print_service/blob/master/lib/ticket_printer_service.rb
 
 The top hash should have:
-    ```javascript
+    ```
     {"printer": <printer name>, "page_format": <page format>, "tickets": <ticket data>}
     ```
 

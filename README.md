@@ -1,3 +1,5 @@
+ticket_print_service
+====================
 This app is a simple sinatra app designed to be run on PC's that want to
 print to local printers, specifically for tickets.
 

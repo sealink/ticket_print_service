@@ -34,15 +34,15 @@ Source: "build\qt_ticket_service.exe"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
-Name: "{group}\Service\Install"; Filename: "{app}\{#MyAppExeName}"; Parameters: "install"
-Name: "{group}\Service\Uninstall"; Filename: "{app}\{#MyAppExeName}"; Parameters: "uninstall"
-Name: "{group}\Service\Start"; Filename: "{app}\{#MyAppExeName}"; Parameters: "start"
-Name: "{group}\Service\Stop"; Filename: "{app}\{#MyAppExeName}"; Parameters: "stop"
+Name: "{group}\Install QT Ticket Service"; Filename: "{app}\{#MyAppExeName}"; Parameters: "install"
+Name: "{group}\Uninstall QT Ticket Service"; Filename: "{app}\{#MyAppExeName}"; Parameters: "uninstall"
+Name: "{group}\Start QT Ticket Service"; Filename: "{app}\{#MyAppExeName}"; Parameters: "start"
+Name: "{group}\Stop QT Ticket Service"; Filename: "{app}\{#MyAppExeName}"; Parameters: "stop"
 Name: "{group}\Uninstall\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"
 
 [Run]
-Filename: "{app}\{#MyAppExeName}"; Parameters: "install"; Description: "Install background service"
-Filename: "{app}\{#MyAppExeName}"; Parameters: "start"; Flags: postinstall skipifsilent; Description: "Start background service"
+Filename: "{app}\{#MyAppExeName}"; Parameters: "install"; WorkingDir: "{app}"; Flags: runhidden; Description: "Install background service"
+Filename: "{app}\{#MyAppExeName}"; Parameters: "start"; WorkingDir: "{app}"; Flags: runhidden; Description: "Start background service"
 
 [UninstallRun]
 Filename: "{app}\{#MyAppExeName}"; Parameters: "uninstall"; WorkingDir: "{app}"; StatusMsg: "Uninstalling background service"

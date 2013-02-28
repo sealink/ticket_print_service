@@ -10,9 +10,9 @@ Install jSmooth v 0.9.9-7
 Build the java war file
 =======================
 
-You must build the java war file, and place it in this './src' as source for the exe builders.
+You must build the java war file, and place it in './src' as source for the exe builders.
 
-Build Jruby app into a 'war' with warbler in the "ticket_printer_service" project (top project dir - not this one).
+Build Jruby app into a 'war' with warbler in the "ticket_printer_service" project (not this one).
     bundle exec warble executable war
 
 Copy war file here:

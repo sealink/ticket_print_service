@@ -29,7 +29,7 @@
 </skeletonProperties>
 <skeletonProperties>
 <key>Message</key>
-<value>This program needs Java to run. Please download it at http://www.java.comf</value>
+<value>This program needs Java JDK (not just the JRE!!) to run. Please download it at http://www.oracle.com.</value>
 </skeletonProperties>
 <skeletonProperties>
 <key>Autostart</key>

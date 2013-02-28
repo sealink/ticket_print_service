@@ -26,6 +26,8 @@ Steps to build a windows executable of this JRUBY server
 2) Click menu Project > Compile
 3) ./build/qt_ticket_service.exe will be created
 
+IMPORTANT NOTE: jSmooth will not compile if working in files within a network share.
+
 This executable wraps the JRUBY service as a windows service.
 It is preconfigured to run port 1337, but you can use the jsmooth gui to change if desired.
 

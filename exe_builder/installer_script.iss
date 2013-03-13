@@ -30,8 +30,7 @@ OutputDir=dist
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Files]
-Source: "build\qt_ticket_service.exe"; DestDir: "{app}"; Flags: ignoreversion
-; NOTE: Don't use "Flags: ignoreversion" on any shared system files
+Source: "build\*"; DestDir: "{app}"; Flags: createallsubdirs recursesubdirs
 
 [Icons]
 Name: "{group}\Install QT Ticket Service"; Filename: "{app}\{#MyAppExeName}"; Parameters: "install"

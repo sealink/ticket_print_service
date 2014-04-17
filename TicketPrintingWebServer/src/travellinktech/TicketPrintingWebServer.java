@@ -30,6 +30,9 @@ public class TicketPrintingWebServer {
         System.err.println("Only argument accepted is 'port' and is must be an integer");
         System.exit(1);
       }
+      if (args.length > 2) {
+        setSecure(args[1], args[2], null, null);
+      }
     }
     setPort(port);
 

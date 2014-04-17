@@ -55,3 +55,7 @@ To run the app, just java -jar it:
 You can change the port by passing in a single argument, such as:
 
     java -jar JavaTicketPrinterService.jar 4567
+
+You can also change the port by passing in two additional arguments, such as:
+
+    java -jar JavaTicketPrinterService.jar 4567 keystore.jks password

@@ -6,15 +6,20 @@
 <JVMSearchPath>jrepath</JVMSearchPath>
 <JVMSearchPath>jdkpath</JVMSearchPath>
 <JVMSearchPath>jview</JVMSearchPath>
+<arguments>1337 keystore.jks password</arguments>
 <classPath>build\TicketPrinter.jar</classPath>
 <classPath>build\TicketPrintingWebServer.jar</classPath>
-<classPath>build\jetty-webapp-7.3.0.v20110203.jar</classPath>
+<classPath>build\javax.servlet-api-3.1.0.jar</classPath>
+<classPath>build\jetty-http-9.0.2.v20130417.jar</classPath>
+<classPath>build\jetty-io-9.0.2.v20130417.jar</classPath>
+<classPath>build\jetty-server-9.0.2.v20130417.jar</classPath>
+<classPath>build\jetty-util-9.0.2.v20130417.jar</classPath>
+<classPath>build\jetty-webapp-9.0.2.v20130417.jar</classPath>
 <classPath>build\json-simple-1.1.1.jar</classPath>
 <classPath>build\log4j-1.2.14.jar</classPath>
-<classPath>build\servlet-api-3.0.pre4.jar</classPath>
-<classPath>build\slf4j-api-1.6.1.jar</classPath>
+<classPath>build\slf4j-api-1.7.6.jar</classPath>
 <classPath>build\slf4j-log4j12-1.6.1.jar</classPath>
-<classPath>build\spark-0.9.9.4-SNAPSHOT.jar</classPath>
+<classPath>build\spark-core-1.1.1.jar</classPath>
 <currentDirectory>${EXECUTABLEPATH}</currentDirectory>
 <embeddedJar>false</embeddedJar>
 <executableName>build\qt_ticket_console.exe</executableName>

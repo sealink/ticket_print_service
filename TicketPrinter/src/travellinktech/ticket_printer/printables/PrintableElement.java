@@ -14,7 +14,7 @@ public class PrintableElement {
   TicketElement element;
 
   String FONTNAME = "Verdana";
-  private double fontMultiplier = 0.8;   // Fonts seem to need this multiplier to accurately position... 
+  private final double fontMultiplier = 0.8;   // Fonts seem to need this multiplier to accurately position... 
 
   public PrintableElement(TicketElement element) {
     this.element = element;

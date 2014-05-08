@@ -19,7 +19,7 @@ import travellinktech.ticket_printer.printables.PrintableTickets;
  */
 public class TicketPrinter {
 
-  private PrinterJob printerJob;
+  private final PrinterJob printerJob;
   private TicketPageSettings ticketPageSettings;
   static final Object ticketPrintingLock = new Object();
 

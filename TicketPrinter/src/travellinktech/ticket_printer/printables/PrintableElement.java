@@ -12,15 +12,12 @@ import javax.imageio.ImageIO;
 public class PrintableElement {
 
   TicketElement element;
-  String baseUrl;
 
   String FONTNAME = "Verdana";
   private double fontMultiplier = 0.8;   // Fonts seem to need this multiplier to accurately position... 
 
-  
-  public PrintableElement(TicketElement element, String baseUrl) {
+  public PrintableElement(TicketElement element) {
     this.element = element;
-    this.baseUrl = baseUrl;
   }
 
   public void drawOn(Graphics2D g) {
@@ -34,7 +31,6 @@ public class PrintableElement {
       drawString(g, currentFont);
     }
   }
-
 
   /* 
    * Handle Font setting
@@ -59,16 +55,16 @@ public class PrintableElement {
    * Draw an image
    */
   private void drawImage(Graphics2D g) {
-    Image img = loadImage(element.getImageValue(), this.baseUrl);
+    Image img = loadImage(element.getImageValue());
     if (img != null) {
       addImage(g, img, element.getX(), element.getY());  // remainder is the image url
     }
   }
 
-  private Image loadImage(String imageUrlString, String baseUrl) {
+  private Image loadImage(String imageUrlString) {
     Image img = null;
     try {
-      URL url = new URL(baseUrl + imageUrlString);
+      URL url = new URL(imageUrlString);
       img = ImageIO.read(url);
     } catch (IOException ex) {
     }
@@ -89,7 +85,6 @@ public class PrintableElement {
   private double calculatePrinterResolution() {
     return 72.0 / 25.4;
   }
-
 
   /*
    * Draw a string

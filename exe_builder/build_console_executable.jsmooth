@@ -20,6 +20,7 @@
 <classPath>build\slf4j-api-1.7.6.jar</classPath>
 <classPath>build\slf4j-log4j12-1.6.1.jar</classPath>
 <classPath>build\spark-core-1.1.1.jar</classPath>
+<classPath>build\commons-codec-1.9.jar</classPath>
 <currentDirectory>${EXECUTABLEPATH}</currentDirectory>
 <embeddedJar>false</embeddedJar>
 <executableName>build\qt_ticket_console.exe</executableName>

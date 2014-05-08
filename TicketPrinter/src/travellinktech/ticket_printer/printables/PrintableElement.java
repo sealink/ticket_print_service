@@ -5,9 +5,13 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics2D;
 import java.awt.Image;
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.net.URL;
+import java.io.InputStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.imageio.ImageIO;
+import org.apache.commons.codec.binary.Base64;
 
 public class PrintableElement {
 
@@ -55,21 +59,18 @@ public class PrintableElement {
    * Draw an image
    */
   private void drawImage(Graphics2D g) {
-    Image img = loadImage(element.getImageValue());
-    if (img != null) {
-      addImage(g, img, element.getX(), element.getY());  // remainder is the image url
+    try {
+      Image img = loadImgFromBase64(element.getImageValue());
+      addImage(g, img, element.getX(), element.getY());
+    } catch (IOException ex) {
+      Logger.getLogger(PrintableElement.class.getName()).log(Level.SEVERE, null, ex);
     }
   }
 
-  private Image loadImage(String imageUrlString) {
-    Image img = null;
-    try {
-      URL url = new URL(imageUrlString);
-      img = ImageIO.read(url);
-    } catch (IOException ex) {
-    }
-
-    return img;
+  private Image loadImgFromBase64(String imgEncodedInBase64) throws IOException {
+    byte[] imgData = Base64.decodeBase64(imgEncodedInBase64);
+    InputStream in = new ByteArrayInputStream(imgData);
+    return ImageIO.read(in);
   }
 
   private void addImage(Graphics2D g, Image img, int x, int y) {

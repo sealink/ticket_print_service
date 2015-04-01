@@ -9,9 +9,16 @@ public class TicketElement {
   private boolean italic = false;
   private String value = "";
 
-  // Image is prefixed 'image:' then base64 encoded
   public boolean isImage() {
+    return isImageUrl() || isImageBase64();
+  }
+  
+  public boolean isImageUrl() {
      return this.value.startsWith("image:");
+  }
+
+  public boolean isImageBase64() {
+     return this.value.startsWith("imageBase64:");
   }
   
   public int getX() {

@@ -5,9 +5,8 @@ import java.awt.print.PrinterException;
 import java.awt.print.PrinterJob;
 import java.util.List;
 import javax.print.PrintService;
-import travellinktech.ticket_printer.printables.NoSuchPrinterException;
-import travellinktech.ticket_printer.printables.NoTicketPageSettingsAssigned;
-import travellinktech.ticket_printer.printables.PrintServiceLocator;
+import travellinktech.ticket_printer.exceptions.NoSuchPrinterException;
+import travellinktech.ticket_printer.exceptions.NoTicketPageSettingsAssigned;
 import travellinktech.ticket_printer.printables.PrintableTickets;
 
 

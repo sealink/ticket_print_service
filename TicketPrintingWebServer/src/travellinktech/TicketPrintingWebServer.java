@@ -11,7 +11,7 @@ import org.json.simple.JSONValue;
 import spark.*;
 import static spark.Spark.*;
 import travellinktech.ticket_printer.TicketPrintCommand;
-import travellinktech.ticket_printer.printables.PrintServiceLocator;
+import travellinktech.ticket_printer.PrintServiceLocator;
 
 public class TicketPrintingWebServer {
 

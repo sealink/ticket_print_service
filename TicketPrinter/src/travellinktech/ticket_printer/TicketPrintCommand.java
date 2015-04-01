@@ -3,8 +3,8 @@ package travellinktech.ticket_printer;
 import java.awt.print.PrinterException;
 import java.util.List;
 import java.util.Map;
-import travellinktech.ticket_printer.printables.NoSuchPrinterException;
-import travellinktech.ticket_printer.printables.NoTicketPageSettingsAssigned;
+import travellinktech.ticket_printer.exceptions.NoSuchPrinterException;
+import travellinktech.ticket_printer.exceptions.NoTicketPageSettingsAssigned;
 import travellinktech.ticket_printer.ticketfactory.TicketListFactory;
 import travellinktech.utils.NumberConvertor;
 

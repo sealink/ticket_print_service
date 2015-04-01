@@ -3,8 +3,6 @@
 
 import travellinktech.ticket_printer.Ticket;
 import travellinktech.ticket_printer.TicketElement;
-import travellinktech.ticket_printer.printables.NoSuchPrinterException;
-import travellinktech.ticket_printer.printables.NoTicketPageSettingsAssigned;
 import travellinktech.ticket_printer.TicketPrinter;
 import java.awt.print.PrinterException;
 import java.util.ArrayList;
@@ -14,6 +12,8 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import travellinktech.ticket_printer.exceptions.NoSuchPrinterException;
+import travellinktech.ticket_printer.exceptions.NoTicketPageSettingsAssigned;
 
 /**
  *

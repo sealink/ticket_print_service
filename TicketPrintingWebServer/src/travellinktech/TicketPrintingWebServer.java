@@ -78,7 +78,7 @@ public class TicketPrintingWebServer {
           ticketPrintCommand.execute();
         } catch (Exception ex) {
           java.util.logging.Logger.getLogger(TicketPrintingWebServer.class.getName()).log(Level.SEVERE, null, ex);
-          halt(500, "Not so good: " + ex.getMessage());
+          halt(500, "Print failed: " + ex.getMessage());
         }
 
         return "";  // OK

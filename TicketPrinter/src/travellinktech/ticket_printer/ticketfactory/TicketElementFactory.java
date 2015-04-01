@@ -29,7 +29,6 @@ public class TicketElementFactory {
     return ticketElement;
   }
 
-  
   // Get the value -- the field content to print
   private String valueAttr() {
     return stringAttr("value").replaceAll("&nbsp;", "");
